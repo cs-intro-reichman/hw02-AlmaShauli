@@ -30,6 +30,7 @@ public class OneOfEachStats {
 		int familiesWith3Children = 0;
 		int familiesWith4OrMoreChildren = 0;
 
+		// ss
 		double sumOfAllTheChildren = 0;
 
 		for (int t = 0; t < T; t++) {
