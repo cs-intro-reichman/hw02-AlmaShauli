@@ -35,7 +35,7 @@ public class OneOfEachStats {
 		for (int t = 0; t < T; t++) {
 			boolean isBoy = false;
 			boolean isGirl = false;
-			int birth = generator;
+			double birth = generator.nextDouble();
 			int sumOfChildren = 1;
 
 			if (birth == 0) {
