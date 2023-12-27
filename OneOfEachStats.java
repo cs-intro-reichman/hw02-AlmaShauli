@@ -70,7 +70,7 @@ public class OneOfEachStats {
 			}
 		}
 
-		System.out.println(sumOfAllTheChildren / (double) T + " children to get at lest one of each gender.");
+		System.out.println("Average: " + sumOfAllTheChildren / (double) T + " children to get at lest one of each gender.");
 		System.out.println("Number of families with 2 children: " + familiesWith2Children);
 		System.out.println("Number of families with 3 children: " + familiesWith3Children);
 		System.out.println("Number of families with 4 or more children: " + familiesWith4OrMoreChildren);
