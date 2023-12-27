@@ -9,14 +9,14 @@ public class InOrder {
 		// Rolls a number between 0 (inclusive) to 10 (not inclusive)
 		int x = (int) (10 * Math.random());
 
-		// Prints thr number that rolled
+		// Prints the number that rolled
 		System.out.print(x + " ");
 
 		// Rolls a number between 0 (inclusive) to 10 (not inclusive)
 		int y = (int) (10 * Math.random());
 
 		//
-		do {
+		while (x <= y) {
 
 			// Prints thr number that rolled
 			System.out.print(y + " ");
@@ -28,7 +28,7 @@ public class InOrder {
 			y = (int) (10 * Math.random());
 
 			// Checks if the rolled number is lees than or equal to the last number printed
-		} while (x <= y);
+		}
 
 	}
 }
