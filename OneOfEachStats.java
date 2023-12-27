@@ -30,7 +30,6 @@ public class OneOfEachStats {
 		int familiesWith3Children = 0;
 		int familiesWith4OrMoreChildren = 0;
 
-		// ss
 		double sumOfAllTheChildren = 0;
 
 		for (int t = 0; t < T; t++) {
@@ -39,12 +38,12 @@ public class OneOfEachStats {
 			double birth = generator.nextDouble();
 			int sumOfChildren = 1;
 
-			if (birth == 0) {
+			if (birth < 0.5) {
 				isGirl = true;
 				while (!isBoy) {
 					birth = generator.nextDouble();
 
-					if (birth == 1) {
+					if (birth >= 0.5) {
 						isBoy = true;
 					}
 					sumOfChildren++;
@@ -54,7 +53,7 @@ public class OneOfEachStats {
 				while (!isGirl) {
 					birth = generator.nextDouble();
 
-					if (birth == 0) {
+					if (birth < 0.5) {
 						isGirl = true;
 					}
 					sumOfChildren++;
