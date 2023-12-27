@@ -64,11 +64,11 @@ public class OneOfEachStats1 {
 		}
 		if (max < familiesWith4OrMoreChildren) {
 			max = familiesWith4OrMoreChildren;
-			System.out.println("The most common number of children is 4 or more");
+			System.out.println("The most common number of children is 4 or more.");
 		} else if (max == familiesWith2Children) {
-			System.out.println("The most common number of children is 2");
+			System.out.println("The most common number of children is 2.");
 		} else {
-			System.out.println("The most common number of children is 3");
+			System.out.println("The most common number of children is 3.");
 		}
 
 	}
