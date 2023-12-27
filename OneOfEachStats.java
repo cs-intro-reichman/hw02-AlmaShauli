@@ -41,7 +41,7 @@ public class OneOfEachStats {
 			if (birth == 0) {
 				isGirl = true;
 				while (!isBoy) {
-					birth = generator;
+					birth = generator.nextDouble();
 
 					if (birth == 1) {
 						isBoy = true;
@@ -51,7 +51,7 @@ public class OneOfEachStats {
 			} else {
 				isBoy = true;
 				while (!isGirl) {
-					birth = generator;
+					birth = generator.nextDouble();
 
 					if (birth == 0) {
 						isGirl = true;
