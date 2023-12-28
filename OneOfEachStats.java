@@ -26,10 +26,10 @@ public class OneOfEachStats {
 		//// randomization will be based on the given seed.
 		//// This is the only change that you have to do in the program.
 
+		// Determination of variables
 		int familiesWith2Children = 0;
 		int familiesWith3Children = 0;
 		int familiesWith4OrMoreChildren = 0;
-
 		double sumOfAllTheChildren = 0;
 
 		for (int t = 0; t < T; t++) {
@@ -38,11 +38,13 @@ public class OneOfEachStats {
 			double birth = generator.nextDouble();
 			int sumOfChildren = 1;
 
+			// Checks if it is a girl or a boy
 			if (birth < 0.5) {
 				isGirl = true;
+
+				// Continues to give birth until a boy is received
 				while (!isBoy) {
 					birth = generator.nextDouble();
-
 					if (birth >= 0.5) {
 						isBoy = true;
 					}
@@ -50,17 +52,23 @@ public class OneOfEachStats {
 				}
 			} else {
 				isBoy = true;
+
+				// Continues to give birth until a girl is received
 				while (!isGirl) {
 					birth = generator.nextDouble();
-
 					if (birth < 0.5) {
 						isGirl = true;
 					}
 					sumOfChildren++;
 				}
-
 			}
+
+			// Adds the number of the children in the current family to the counter that
+			// counts the total number of all children
 			sumOfAllTheChildren += sumOfChildren;
+
+			// Adds 1 to the group that counts the number of times that number of children
+			// has appeared
 			if (sumOfChildren == 2) {
 				familiesWith2Children++;
 			} else if (sumOfChildren == 3) {
@@ -70,11 +78,14 @@ public class OneOfEachStats {
 			}
 		}
 
+		// Prints the average to get at least one children of each gender.
 		System.out.println(
 				"Average: " + sumOfAllTheChildren / (double) T + " children to get at least one of each gender.");
 		System.out.println("Number of families with 2 children: " + familiesWith2Children);
 		System.out.println("Number of families with 3 children: " + familiesWith3Children);
 		System.out.println("Number of families with 4 or more children: " + familiesWith4OrMoreChildren);
+
+		// Checks and prints the most common numder of children
 		int max = familiesWith2Children;
 		if (max < familiesWith3Children) {
 			max = familiesWith3Children;

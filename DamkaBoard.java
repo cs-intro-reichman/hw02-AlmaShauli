@@ -32,7 +32,7 @@ public class DamkaBoard {
 			}
 
 			// Skip to the next line
-			System.out.println("");
+			System.out.println();
 
 			line++;
 		}

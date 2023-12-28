@@ -8,27 +8,21 @@ public class InOrder {
 
 		// Rolls a number between 0 (inclusive) to 10 (not inclusive)
 		int x = (int) (10 * Math.random());
-
 		// Prints the number that rolled
-		System.out.print(x + " ");
+		int y = 0;
 
-		// Rolls a number between 0 (inclusive) to 10 (not inclusive)
-		int y = (int) (10 * Math.random());
-
-		//
-		while (x <= y) {
+		do {
 
 			// Prints thr number that rolled
-			System.out.print(y + " ");
+			System.out.print(x + " ");
 
 			// Changes the last number to the new last number
-			x = y;
+			y = x;
 
 			// Rolls a number between 0 (inclusive) to 10 (not inclusive)
-			y = (int) (10 * Math.random());
-
-			// Checks if the rolled number is lees than or equal to the last number printed
+			x = (int) (10 * Math.random());
 		}
-
+		// Checks if the rolled number is less than or equal to the last number printed
+		while (x >= y);
 	}
 }
