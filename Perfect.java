@@ -21,18 +21,14 @@ public class Perfect {
 		// Checking if the divisor is less than the number received
 		while (d < N) {
 
-			// Determining an integer k that help to check if d is a divisor of N
-			for (int k = 1; k < N + 1; k++) {
+			// Checking if d is a divisor of x
+			if (N % d == 0) {
 
-				// Checking if d is a divisor of N
-				if (k * d == N) {
+				// Adds the divisor to the string
+				str += " + " + d;
 
-					// Adds the divisor to the string
-					str += " + " + d;
-
-					// Adds the divisor to the sum of the divisors
-					sum += d;
-				}
+				// Adds the divisor to the sum of the divisors
+				sum += d;
 			}
 
 			// Increases the divisor number by 1

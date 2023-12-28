@@ -23,7 +23,6 @@ public class DamkaBoard {
 					System.out.print("* ");
 				}
 			} else {
-
 				// Prints n times *
 				for (int i = 0; i < n; i++) {
 
@@ -33,7 +32,6 @@ public class DamkaBoard {
 
 			// Skip to the next line
 			System.out.println();
-
 			line++;
 		}
 	}

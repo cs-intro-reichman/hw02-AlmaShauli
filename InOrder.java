@@ -8,11 +8,11 @@ public class InOrder {
 
 		// Rolls a number between 0 (inclusive) to 10 (not inclusive)
 		int x = (int) (10 * Math.random());
-		// Prints the number that rolled
+
+		// Determination of variable
 		int y = 0;
 
 		do {
-
 			// Prints thr number that rolled
 			System.out.print(x + " ");
 
